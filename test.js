@@ -15,7 +15,7 @@ let fetchRequestSource = fetchRequest.toString();
     return fetchRequestInBrowser('http://httpstat.us/200');
   }, fetchRequestSource);
   await assert.doesNotReject(result, Error);
-  console.log('✅ It does request');
+  console.log('✅ Request completed');
 
   result = page.evaluate(fetchRequestString => {
     let fetchRequestInBrowser = new Function(`return ${fetchRequestString}`)();
@@ -27,7 +27,7 @@ let fetchRequestSource = fetchRequest.toString();
     message: 'Evaluation failed: DOMException: The user aborted a request.',
     name: 'Error'
   });
-  console.log('✅ It cancels request');
+  console.log('✅ Request canceled');
 
   await browser.close();
 })();
