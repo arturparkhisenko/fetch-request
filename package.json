@@ -18,17 +18,16 @@
     "javascript",
     "request"
   ],
-  "engineStrict": true,
   "engines": {
     "node": ">= 12.16.3"
   },
-  "main": "index.js",
+  "browser": "index.js",
   "type": "module",
   "scripts": {
     "test": "node --experimental-modules test.js"
   },
   "devDependencies": {
-    "eslint": "^7.0.0",
-    "puppeteer": "^3.0.4"
+    "eslint": "^7.20.0",
+    "puppeteer": "^7.1.0"
   }
 }
